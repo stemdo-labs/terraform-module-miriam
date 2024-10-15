@@ -35,11 +35,4 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_username                    = each.value.admin_user
   admin_password                    = each.value.admin_password
   disable_password_authentication   = false
-
-#  custom_data = base64encode(<<-EOF
-#    #!/bin/bash
-#    sudo apt-get update
-#    sudo apt-get install -y nginx
-#  EOF
-#  )
 }
